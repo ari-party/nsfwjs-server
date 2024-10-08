@@ -48,15 +48,15 @@ router.post(
       const image = await sharp(req.file.buffer).png().toBuffer();
       const decodedImage = tf.node.decodeImage(new Uint8Array(image), 3);
 
-      const result = await model.classify(decodedImage);
+      const result = await model
+        .classify(decodedImage)
+        .finally(() => decodedImage.dispose());
       const probabilities = Object.fromEntries(
         result.map((prediction) => [
           prediction.className,
           prediction.probability,
         ]),
       );
-
-      decodedImage.dispose();
 
       res
         .json({
