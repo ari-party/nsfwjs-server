@@ -1,0 +1,44 @@
+{
+  "name": "nsfwjs-server",
+  "version": "1.0.0",
+  "author": "Astrid <git@astrid.email>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier . -w",
+    "fix": "npm run lint:fix && npm run format",
+    "start": "tsx src/index.ts",
+    "depcheck": "depcheck"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/express-serve-static-core": "^4.19.6",
+    "@types/klaw": "^3.0.6",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^20.16.11",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "depcheck": "^1.4.7",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "prettier-eslint": "^16.3.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.21.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "klaw": "^4.1.0",
+    "multer": "1.4.5-lts.1",
+    "nsfwjs": "^4.1.0",
+    "sharp": "^0.33.5"
+  }
+}
