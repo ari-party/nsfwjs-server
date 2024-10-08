@@ -1,10 +1,12 @@
 # nsfwjs-server
 
-[nsfwjs](https://github.com/infinitered/nsfwjs) wrapper as express server written in typescript
+[nsfwjs](https://github.com/infinitered/nsfwjs) wrapper as express server written in typescript.
 
 See example environment variables in `.env.template`, all are optional.
 
 JPEG, JPG, and PNG are accepted. Server will automatically convert to PNG using [sharp](https://npmjs.com/package/sharp).
+
+Reminder to set `NODE_ENV` environment variable to `production` when running in production.
 
 # Responses
 
