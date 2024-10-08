@@ -56,6 +56,8 @@ router.post(
         ]),
       );
 
+      decodedImage.dispose();
+
       res
         .json({
           message: 'success',
