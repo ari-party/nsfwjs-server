@@ -20,7 +20,7 @@ Code 401
 }
 ```
 
-## Bad image
+## Bad/missing image
 
 Code 400
 
